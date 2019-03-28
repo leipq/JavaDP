@@ -1,0 +1,5 @@
+package kingdee.base.ssc.day002.bridge;
+
+public interface Implementor {
+    public void operationImpl();
+}
