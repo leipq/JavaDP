@@ -1,3 +1,13 @@
 git add .
 git commit -m "本地提交测试"
 git push origin master
+
+
+总结：
+clone 下来的代码默认就关联了远程库
+git commit -m 后面的注释不能为空
+
+clone 下来代码后，要进入仓库里面的文件夹内操作
+空文件夹没法检测出来
+
+删除一个空文件夹没法检测出来
