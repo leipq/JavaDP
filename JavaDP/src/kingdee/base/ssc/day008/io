@@ -1,0 +1,41 @@
+
+InputStream类型
+ByteArrayInputStream
+    允许将内存的缓冲区当做inputStream
+        缓冲区，字节将从中取出，作为一种数据源：
+        将其与FilterInputStream对象相连以提供有用接口
+StringBufferInputStream
+    将String转化为inputStream
+        字符串 底层实际是StringBuffer
+        作为一种数据源，将其与FilterInputStream对象相连以提供有用接口
+FileInputStream
+    用于从文件读取信息
+        字符串表示文件名，文件或者是 FilterDescriptor对象
+        数据源：相连FilterInputStream 提供接口
+PrpedInputStream
+    产生用于写入相关PrpedOutputStream的数据，实现“管道化”概念
+        PrpedOutputStream
+        作为多线程数据源，将其与FilterInputStream 相连提供有用的接口
+SequenceInputStream
+    将两个或者是多个InputStream转化为一个单一的InputStream
+        两个InputStream对象或者是 一个容纳InputStream对象的容器Enumeration
+        作为一种数据源于FilterInputStream相连提供有用的接口
+FilterInputStream
+    抽象类 作为“装饰器”的接口；其中装饰器为其他InputSream提供功能
+
+
+OutputStream类型
+ByteArrayOutputSream
+    在内存中创建缓冲区；所有送往 流 的数据都要放置在此缓冲区
+        缓冲区初始化尺寸（可选）
+        用于指定数据的目的地：与FilterOutputStream相连提供接口
+FileOutputStream
+    将信息写到文件
+        字符串，文件名，文件，FilterDescriptor对象
+        指定数据的目的地，将其与FilterOutputStream相连提供接口
+PrpedOutputStream
+    任何写入其中的信息都会自动作为相关PipedInputStream的输出，实现管道化概念
+        PipedInputStream
+        指定用于多线程的数据目的地，将其与FilterOutputStream对象相连提供接口
+FilterOutputStream
+    抽象类，作为装饰器的接口，装饰器为其他 outputStream 提供功能
