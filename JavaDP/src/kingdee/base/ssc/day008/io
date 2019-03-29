@@ -39,3 +39,35 @@ PrpedOutputStream
         指定用于多线程的数据目的地，将其与FilterOutputStream对象相连提供接口
 FilterOutputStream
     抽象类，作为装饰器的接口，装饰器为其他 outputStream 提供功能
+
+FilterInputStream类型
+DataInputStream
+    与DataOutputStream搭配使用，因此我们可以按照移植方式从流读取基本数据类型（int char long等）
+        InputStream
+        包含读取基本类型数据的全部接口
+BufferedInputStream
+    使用它可以防止每次读取时都得进行实际写操作，代表 使用缓冲区
+        InputStream 可以指定缓冲区大小
+        本质上不提供接口，只不过是向进程中添加缓冲区所必需的，与接口对象搭配
+LineNumberInputStream
+    跟踪输入流中的行号；可调用getLineNumber() 和 setLineNumber(int)
+        InputStream
+        仅增加了行号，可能要与接口对象搭配使用
+PushbackInputStream
+    具有 能弹出一个字节的缓冲区，可以将读到的最后一个字符回退
+        InputStream
+        通常作为编译器的扫描器，之所以包含在内是因为java编译器的需要，我们可能永远不会用到
+
+FilterOutputStream类型
+DataOutputStream
+    与DataInputStream搭配使用，因此可是按照可移植方式向流中写入基本类型数据（int char long等）
+        OutputStream
+        包含用于写入基本数据类型的全部接口
+PrintStream
+    用于产生格式化输出。其中DataOutputStream处理数据的存储，PrintStream处理显示
+        OutputStream 可以用boolean值指示是否在每次换行时清空缓冲区，应该是对OutputStream对象的"final"封装
+        可能会经常使用它
+BufferedOutputStream
+    使用它以避免每次发送数据时都要进行实际的写操作。代表使用 缓冲区。可以调用flush()清空缓冲区
+        OutputStream 可以指定缓冲区大小
+        本质上不提供接口，只不过是向进程中添加缓冲区所必须的，与接口对象搭配
