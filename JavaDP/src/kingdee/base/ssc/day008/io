@@ -71,3 +71,47 @@ BufferedOutputStream
     使用它以避免每次发送数据时都要进行实际的写操作。代表使用 缓冲区。可以调用flush()清空缓冲区
         OutputStream 可以指定缓冲区大小
         本质上不提供接口，只不过是向进程中添加缓冲区所必须的，与接口对象搭配
+
+
+InputStream
+    Reader
+    适配器：InputStreamReader
+OutputStream
+    Writer
+    适配器：OutputStreamWriter
+FileInputStream
+    FileReader
+FileOutputStream
+    FileWriter
+StringBufferInputStream(已弃用)
+    StringReader
+    StringWriter
+ByteArrayInputStream
+    CharArrayReader
+ByteArrayOutputStream
+    CharArrayWriter
+PipedInputStream
+    PipedReader
+PipedOutputStream
+    PipedWriter
+
+
+FilterInputStream
+    FilterReader
+FilterOutputStream
+    FilterWriter(抽象类，没有子类)
+BufferedInputStream
+    BufferedReader(有readLine())
+BufferedOutputStream
+    BufferedWriter
+DataInputStream
+    使用DataInputStream（除了当需要使用readLine()时以外，这时应该使用BufferedReader）
+PrintStream
+    PrintWriter
+LineNumberInputStream(弃用)
+    LineNumberReader
+StreamTokenizer
+    StreamTokenizer(使用接收Reader的构造器)
+PushbackInputStream
+    PushbackReader
+
