@@ -1,0 +1,59 @@
+1. 基类
+
+InputStream与OutputStream是所有字节型输入输出流的基抽象类,同时也是适配器(原始流处理器)需要适配的对象,也是装饰器(链接流处理器)装饰对象的基类.
+2. 原始流处理器
+原始流处理器接收Byte数组对象,String对象,FileDescriptor对象将其适配成InputStream,以供其他装饰器使用,他们都继承自InputStream 包括如下几个:
+ByteArrayInputStream: 接收Byte数组为流源,为多线程通信提供缓冲区操作功能
+FileInputStream: 接收一个File作为流源,用于文件的读取
+PipedInputStream: 接收一个PipedOutputStream,与PipedOutputStream配合作为管道使用
+StringBufferInputStream: 接收一个String作为流的源(已弃用)
+3. 链接流处理器
+
+链接流处理器可以接收另一个流处理器(InputStream,包括链接流处理器和原始流处理器)作为源,并对其功能进行扩展,所以说他们是装饰器.
+1) FilterInputStream继承自InputStream,是所有装饰器的父类,FilterInputStream内部也包含一个InputStream,这个InputStream就是被装饰类--一个原始流处理器,它包括如下几个子类:
+BufferedInputStream: 用来将数据读入内存缓冲区,并从此缓冲区提供数据
+DataInputStream: 提供基于多字节的读取方法,可以读取原始数据类型(Byte, Int, Long, Double等等)
+LineNumberInputStream:  提供具有行计数功能的流处理器
+PushbackInputStream:  提供已读取字节"推回"输入流的功能
+2) ObjectInputStream: 可以将使用ObjectOutputStream写入的基本数据和对象进行反串行化
+3) SequenceInputStream: 可以合并多个InputStream原始流,依次读取这些合并的原始流
+对于OutputStream, Reader, Writer的体系结构也跟InputStream的结构类似
+
+
+
+
+包装流：PrintStream/PrintWriter/Scanner
+PrintStream可以封装（包装）直接与文件交互的节点流对象OutputStream, 使得编程人员可以忽略设备底层的差异，进行一致的IO操作。因此这种流也称为处理流或者包装流。
+
+PrintWriter除了可以包装字节流OutputStream之外，还能包装字符流Writer
+
+Scanner可以包装键盘输入，方便地将键盘输入的内容转换成我们想要的数据类型。
+
+字符串流：StringReader/StringWriter
+这两个操作的是专门操作String字符串的流，其中StringReader能从String中方便地读取数据并保存到char数组，而StringWriter则将字符串类型的数据写入到StringBuffer中（因为String不可写）。
+
+转换流：InputStreamReader/OutputStreamReader
+这两个类可以将字节流转换成字符流，被称为字节流与字符流之间的桥梁。我们经常在读取键盘输入(System.in)或网络通信的时候，需要使用这两个类
+
+缓冲流：BufferedReader/BufferedWriter ， BufferedInputStream/BufferedOutputStream
+Oracle官方的描述：
+
+Most of the examples we've seen so far use unbuffered I/O. This means each read or write request is handled directly by the underlying OS. This can make a program much less efficient.
+
+Buffered input streams read data from a memory area known as a buffer; the native input API is called only when the buffer is empty. Similarly, buffered output streams write data to a buffer, and the native output API is called only when the buffer is full.
+
+即，
+
+没有经过Buffered处理的IO， 意味着每一次读和写的请求都会由OS底层直接处理，这会导致非常低效的问题。
+
+经过Buffered处理过的输入流将会从一个buffer内存区域读取数据，本地API只会在buffer空了之后才会被调用（可能一次调用会填充很多数据进buffer）。
+
+经过Buffered处理过的输出流将会把数据写入到buffer中，本地API只会在buffer满了之后才会被调用。
+
+
+
+BufferedReader/BufferedWriter可以将字符流(Reader)包装成缓冲流，这是最常见用的做法。
+
+另外，BufferedReader提供一个readLine()可以方便地读取一行，而FileInputStream和FileReader只能读取一个字节或者一个字符，
+
+因此BufferedReader也被称为行读取器
