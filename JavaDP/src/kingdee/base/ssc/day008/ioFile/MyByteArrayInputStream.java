@@ -36,8 +36,6 @@ public class MyByteArrayInputStream {
         String str = output.toString();
         System.out.println(output);
 
-        StringBuffer
-
         input1.close();
         input2.close();
         output.close();
