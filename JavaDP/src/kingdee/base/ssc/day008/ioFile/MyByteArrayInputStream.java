@@ -33,8 +33,9 @@ public class MyByteArrayInputStream {
         while ((temp = input2.read(data)) != -1){
             output.write(data,0,temp);
         }
-        String str = output.toString();
-        System.out.println(output);
+
+        byte[] shuju = output.toByteArray();
+        System.out.println(new String(shuju,0,shuju.length));
 
         input1.close();
         input2.close();
