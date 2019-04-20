@@ -1,9 +1,9 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.math.BigInteger;
-import java.util.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.Immutable;
 
-import net.jcip.annotations.*;
+import java.math.BigInteger;
+import java.util.Arrays;
 
 /**
  * OneValueCache

@@ -1,10 +1,11 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.GuardedBy;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
+
 import java.io.IOException;
 import java.net.Socket;
 import java.util.concurrent.*;
-
-import net.jcip.annotations.*;
 
 /**
  * SocketUsingTask

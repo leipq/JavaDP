@@ -1,11 +1,15 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import static java.util.concurrent.TimeUnit.SECONDS;
-import java.math.BigInteger;
-import java.util.*;
-import java.util.concurrent.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.GuardedBy;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
-import net.jcip.annotations.*;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
  * PrimeGenerator

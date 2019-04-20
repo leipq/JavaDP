@@ -1,8 +1,11 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.util.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
-import net.jcip.annotations.*;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 /**
  * ImprovedList

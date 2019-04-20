@@ -1,8 +1,10 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.util.concurrent.*;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import static java.util.concurrent.Executors.newScheduledThreadPool;
-import static net.jcip.examples.LaunderThrowable.launderThrowable;
+import static kingdee.base.ssc.day010.thread.base.jcip.examples.LaunderThrowable.launderThrowable;
 
 /**
  * TimedRun2

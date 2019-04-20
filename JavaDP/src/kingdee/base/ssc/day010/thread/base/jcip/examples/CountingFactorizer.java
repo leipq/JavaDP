@@ -1,10 +1,13 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.math.BigInteger;
-import java.util.concurrent.atomic.*;
-import javax.servlet.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
-import net.jcip.annotations.*;
+import javax.servlet.GenericServlet;
+import javax.servlet.Servlet;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import java.math.BigInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * CountingFactorizer

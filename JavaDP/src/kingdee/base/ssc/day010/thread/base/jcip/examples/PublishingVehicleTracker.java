@@ -1,9 +1,10 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.util.*;
-import java.util.concurrent.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
-import net.jcip.annotations.*;
+import java.util.Collections;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * PublishingVehicleTracker

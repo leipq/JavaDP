@@ -1,7 +1,8 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
 import java.util.concurrent.*;
-import static net.jcip.examples.LaunderThrowable.launderThrowable;
+
+import static kingdee.base.ssc.day010.thread.base.jcip.examples.LaunderThrowable.launderThrowable;
 
 /**
  * TimedRun

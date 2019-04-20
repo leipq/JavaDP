@@ -1,8 +1,11 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.util.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.NotThreadSafe;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
-import net.jcip.annotations.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * ListHelder

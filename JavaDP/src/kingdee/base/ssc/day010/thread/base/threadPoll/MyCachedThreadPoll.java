@@ -5,6 +5,6 @@ import java.util.concurrent.Executors;
 public class MyCachedThreadPoll {
     public static void main(String[] args) {
         Executors.newCachedThreadPool();
-        Executors.newCachedThreadPool()
+        Executors.newCachedThreadPool();
     }
 }

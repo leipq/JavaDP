@@ -1,8 +1,8 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.util.concurrent.atomic.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
-import net.jcip.annotations.*;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * ConcurrentStack

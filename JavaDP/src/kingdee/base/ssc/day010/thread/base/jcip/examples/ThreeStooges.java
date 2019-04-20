@@ -1,8 +1,11 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.util.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.Immutable;
 
-import net.jcip.annotations.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.Vector;
 
 /**
  * ThreeStooges

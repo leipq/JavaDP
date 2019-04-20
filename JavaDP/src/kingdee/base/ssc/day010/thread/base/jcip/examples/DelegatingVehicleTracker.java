@@ -1,11 +1,13 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.util.*;
-import java.util.concurrent.*;
-import java.awt.*;
-import java.awt.Point;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
-import net.jcip.annotations.*;
+import java.awt.Point;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * DelegatingVehicleTracker

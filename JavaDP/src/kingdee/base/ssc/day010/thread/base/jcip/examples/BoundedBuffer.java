@@ -1,6 +1,6 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import net.jcip.annotations.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
 /**
  * BoundedBuffer

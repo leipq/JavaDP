@@ -1,10 +1,11 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.GuardedBy;
+
 import java.io.PrintWriter;
 import java.io.Writer;
-import java.util.concurrent.*;
-
-import net.jcip.annotations.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * LogService

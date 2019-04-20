@@ -1,9 +1,11 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.util.*;
-import java.util.regex.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.GuardedBy;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.ThreadSafe;
 
-import net.jcip.annotations.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * BetterAttributeStore

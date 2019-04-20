@@ -29,7 +29,7 @@ public class DeadLock extends Thread {
                 }
 
                 synchronized (fork2) {
-                    System.out.println("��ѧ��A��ʼ�Է���");
+                    System.out.println("gggg");
                 }
             }
         }
@@ -42,7 +42,7 @@ public class DeadLock extends Thread {
                 }
 
                 synchronized (fork1) {
-                    System.out.println("��ѧ��B��ʼ�Է���");
+                    System.out.println("hhhhh");
                 }
             }
         }
@@ -50,11 +50,11 @@ public class DeadLock extends Thread {
 
 
     public static void main(String args[]) throws InterruptedException {
-        DeadLock ��ѧ��A = new DeadLock(fork1);
-        DeadLock ��ѧ��B = new DeadLock(fork2);
+        DeadLock a = new DeadLock(fork1);
+        DeadLock b = new DeadLock(fork2);
 
-        ��ѧ��A.start();
-        ��ѧ��B.start();
+        a .start();
+        b.start();
 
         Thread.sleep(1000);
     }

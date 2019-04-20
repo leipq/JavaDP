@@ -3,9 +3,10 @@
  */
 package kingdee.base.ssc.day010.thread.base.ArtConcurrentBook.chapter05;
 
-import java.util.concurrent.locks.Lock;
 
-import chapter04.SleepUtils;
+import kingdee.base.ssc.day010.thread.base.ArtConcurrentBook.chapter04.SleepUtils;
+
+import java.util.concurrent.locks.Lock;
 
 /**
  * 10-11
@@ -28,7 +29,7 @@ public class TwinsLockTest {
                 }
             }
         }
-        // ����10���߳�
+        /* ����10���߳� */
         for (int i = 0; i < 10; i++) {
             Worker w = new Worker();
             w.setDaemon(true);

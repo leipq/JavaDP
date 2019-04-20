@@ -1,10 +1,15 @@
 package kingdee.base.ssc.day010.thread.base.jcip.examples;
 
-import java.net.URL;
-import java.util.*;
-import java.util.concurrent.*;
+import kingdee.base.ssc.day010.thread.base.jcip.annotations.GuardedBy;
 
-import net.jcip.annotations.*;
+import java.net.URL;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
