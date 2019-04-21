@@ -6,6 +6,22 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * leaning
+ * Class clazzA = A.class;
+ * Class clazzB = B.class;
+ * boolean isFather = clazzB.isAssignableFrom(clazzA));
+ * if(isFather){
+ *  System.out.println("A is extends B ");
+ * }else{
+ *  System.out.println("A is not extends B");
+ * }
+ *
+ * 获取泛型的类型：
+ * 新增一个方法，通过反射取泛型的类型
+ *
+ * */
+
 public class GenericTest {
     public static void main(String[] args) throws Exception {
         List<String> list = new ArrayList<>(10);
@@ -19,10 +35,8 @@ public class GenericTest {
     }
     public static void prinParamType(Type[] types){
         for (Type type :types) {
-            String typeName = type.getTypeName();
-            System.out.println(typeName);
-            if (typeName ==null || !typeName.contains("ParameterizedType")){
-                System.out.println(" typeName is null or type is not match ParameterizedType");
+            if (!ParameterizedType.class.isAssignableFrom(type.getClass())){
+                System.out.println(" type is not match ParameterizedType");
                 return;
             }
             ParameterizedType pType = (ParameterizedType) type;
