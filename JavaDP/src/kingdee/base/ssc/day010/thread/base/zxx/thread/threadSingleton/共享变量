@@ -1,0 +1,4 @@
+多个线程访问共享对象和数据的方式
+1：如果每个线程执行的代码相同，可以使用同一个Runnable对象 eg:RunnableImpl001Test
+2：如果执行的代码不同，也可以使用同一个Runnable对象，每个方法上提供synchronized(用同一个对象锁)
+3：不同的Runnable对象，但是传递同一个共享对象和数据
