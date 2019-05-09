@@ -17,6 +17,7 @@ public class SemaphoreTest {
                         semaphore.acquire();
                         System.out.println("threadName:" + Thread.currentThread().getName() +";has thread:" + (3-semaphore.availablePermits()));
                         Thread.sleep(new Random().nextInt(5000));
+                        System.out.println("threadNameWELLLEVEL:" + Thread.currentThread().getName() +";has thread:" + (3-semaphore.availablePermits()));
                         semaphore.release();
                         System.out.println("endinGthreadName:" + Thread.currentThread().getName() +";has thread:" + (3-semaphore.availablePermits()));
                     } catch (InterruptedException e) {
